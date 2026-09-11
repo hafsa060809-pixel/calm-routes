@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calm Routes - Quiet Navigation for ADHD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>🧠 Calm Routes</h1>
+      <p>Find quiet, peaceful routes that work for your brain</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Settings Section -->
+      <section class="settings-section">
+        <h2>Your Settings</h2>
+        
+        <div class="setting-group">
+          <label for="condition">What applies to you?</label>
+          <select id="condition">
+            <option value="adhd">ADHD - I get overwhelmed easily</option>
+            <option value="sensory">Sensory Sensitive - Loud noises bother me</option>
+            <option value="anxiety">Anxiety - I prefer calm routes</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="setting-group">
+          <label for="noise-level">How much noise can you handle?</label>
+          <input type="range" id="noise-level" min="1" max="5" value="3">
+          <p id="noise-text">Medium - Some traffic is okay</p>
+        </div>
+
+        <div class="setting-group">
+          <label for="crowd-level">How crowded can areas be?</label>
+          <input type="range" id="crowd-level" min="1" max="5" value="3">
+          <p id="crowd-text">Medium - Some people are okay</p>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section class="map-section">
+        <h2>Where do you want to go?</h2>
+        
+        <div class="form-group">
+          <input type="text" id="start-location" placeholder="Starting point (e.g., Home)" class="input">
+          <input type="text" id="end-location" placeholder="Destination (e.g., Coffee Shop)" class="input">
+          <button id="find-route-btn" class="button">Find Calm Route 🗺️</button>
+        </div>
+
+        <!-- Map will go here -->
+        <div id="map" class="map-container"></div>
+      </section>
+
+      <!-- Route Info -->
+      <section class="route-info" id="route-info" style="display: none;">
+        <h2>Your Calm Route</h2>
+        <div id="route-details"></div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made for people who need calm ✨</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
