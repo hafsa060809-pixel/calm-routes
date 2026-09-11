@@ -1,0 +1,242 @@
+/* ============================================
+   CALM ROUTES - STYLING
+   Making everything calm and easy to look at
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colors - Calm and peaceful */
+:root {
+  --primary-color: #7c3aed;      /* Soft purple */
+  --secondary-color: #60a5fa;    /* Calm blue */
+  --background: #f8f7ff;         /* Very light purple */
+  --text: #2d3748;               /* Dark gray */
+  --border: #e2e8f0;             /* Light gray */
+  --success: #10b981;            /* Calm green */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 0;
+  border-bottom: 2px solid var(--border);
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+
+section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* ============================================
+   FORMS & INPUTS
+   ============================================ */
+
+.setting-group {
+  margin-bottom: 20px;
+}
+
+.setting-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.setting-group select,
+.setting-group input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.setting-group input[type="range"] {
+  padding: 0;
+  height: 6px;
+  cursor: pointer;
+}
+
+.setting-group p {
+  margin-top: 8px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.input {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+.button {
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: #6d28d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   MAP
+   ============================================ */
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(135deg, var(--background) 0%, #f0e6ff 100%);
+  border-radius: 12px;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* ============================================
+   ROUTE INFO
+   ============================================ */
+
+.route-info {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#route-details {
+  background: var(--background);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid var(--success);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  border-top: 2px solid var(--border);
+  margin-top: 40px;
+}
+
+/* ============================================
+   RESPONSIVE (Mobile Friendly)
+   ============================================ */
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+
+  .input,
+  .button {
+    width: 100%;
+  }
+
+  .map-container {
+    height: 300px;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
