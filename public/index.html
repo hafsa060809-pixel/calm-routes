@@ -5,13 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calm Routes - Quiet Navigation for ADHD</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-btn {
+      padding: 10px 20px;
+      background: var(--secondary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .nav-btn:hover {
+      background: #4f9ff0;
+      transform: translateY(-2px);
+    }
+
+    .nav-btn.active {
+      background: var(--primary-color);
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
+    <!-- Header with Navigation -->
     <header class="header">
-      <h1>🧠 Calm Routes</h1>
-      <p>Find quiet, peaceful routes that work for your brain</p>
+      <div class="header-nav">
+        <div>
+          <h1>🧠 Calm Routes</h1>
+          <p>Find quiet, peaceful routes that work for your brain</p>
+        </div>
+        <div class="nav-links">
+          <button class="nav-btn active" onclick="goToHome()">🏠 Home</button>
+          <button class="nav-btn" onclick="goToProfile()">👤 Profile</button>
+        </div>
+      </div>
     </header>
 
     <!-- Main Content -->
@@ -55,7 +97,7 @@
         </div>
 
         <!-- Map will go here -->
-        <div id="map" class="map-container"></div>
+        <div id="map" class="map-container">🗺️ Map will be displayed here</div>
       </section>
 
       <!-- Route Info -->
@@ -73,5 +115,15 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // Navigation functions
+    function goToHome() {
+      window.location.href = '/';
+    }
+
+    function goToProfile() {
+      window.location.href = '/profile.html';
+    }
+  </script>
 </body>
 </html>
