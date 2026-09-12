@@ -1,7 +1,96 @@
+# ============================================
+# Node.js & Dependencies
+# ============================================
 node_modules/
+npm-debug.log*
+npm-error.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================
+# Environment Variables
+# ============================================
 .env
 .env.local
+.env.*.local
+.env.production
+
+# ============================================
+# IDE & Editor
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
-*.log
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.fleet/
+
+# ============================================
+# OS Specific
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ============================================
+# Testing & Coverage
+# ============================================
+coverage/
+.nyc_output/
+jest.log
+
+# ============================================
+# Build & Dist
+# ============================================
 dist/
 build/
+*.tgz
+*.tar.gz
+
+# ============================================
+# Logs
+# ============================================
+logs/
+*.log
+
+# ============================================
+# Temporary Files
+# ============================================
+tmp/
+temp/
+*.tmp
+
+# ============================================
+# Database
+# ============================================
+*.db
+*.sqlite
+*.sqlite3
+mongo/
+
+# ============================================
+# API Keys & Secrets
+# ============================================
+.api-keys
+secrets.json
+private/
+
+# ============================================
+# VS Code
+# ============================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
